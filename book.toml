@@ -8,3 +8,18 @@ title = "Tuyen mdBook"
 [build]
 build-dir = "docs"
 create-missing = false
+
+[output.html.print]
+enable = true
+
+[output.html.fold]
+enable = true
+level = 2
+
+[output.html.playground]
+editable = true
+copy-js = true
+line-numbers = true
+
+[output.html.search]
+limit-results = 15
