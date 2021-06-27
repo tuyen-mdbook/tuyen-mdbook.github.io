@@ -1,3 +1,5 @@
+window.tuyenCustomJs = window.tuyenCustomJs || [];
+
 $(function () {
   $('img').each(function () {
     var title = $(this).attr('title');

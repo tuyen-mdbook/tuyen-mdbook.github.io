@@ -1,5 +1,7 @@
 'use strict';
 
+window.bookJs = window.bookJs || [];
+
 // Fix back button cache problem
 window.onunload = function () {};
 
