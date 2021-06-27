@@ -13,8 +13,13 @@ jobs:
 
       - name: Setup mdBook
         run: |
-          wget -qO- https://github.com/tuyen-at-work/mdBook/releases/latest/download/mdbook-x86_64-unknown-linux-gnu.tar.gz | tar -xvz -C /usr/local/bin
-          chmod 0755 /usr/local/bin/mdbook
+          export MDBOOK_TARBALL="mdbook-x86_64-unknown-linux-gnu.tar.gz"
+          wget -qO- https://github.com/tuyen-at-work/mdBook/releases/latest/download/${MDBOOK_TARBALL}
+          tar -zxvf "${MDBOOK_TARBALL}"
+          rm "${MDBOOK_TARBALL}"
+          mkdir ~/bin
+          mv ./mdbook ~/bin/
+          echo "::add-path::~/bin"
             
       - name: Build Book
         run: |
