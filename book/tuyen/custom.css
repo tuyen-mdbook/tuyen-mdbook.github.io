@@ -1,0 +1,322 @@
+:root {
+  --sidebar-width: 300px;
+  --body-font-size: 1.2rem;
+  --content-padding: 0 0 5rem 0;
+  --content-ol-padding-inline-start: 20px;
+  --code-border: #404040;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --code-header-bg: #303030;
+  --code-header-fg: #000;
+  --code-header-button-fg: white;
+}
+
+:root.ayu {
+  --code-header-fg: var(--fg);
+  --chapter-item-bg: var(--quote-bg);
+}
+
+:root.coal {
+  --code-header-fg: var(--fg);
+  --chapter-item-bg: var(--quote-bg);
+}
+
+:root.navy {
+  --code-header-fg: var(--fg);
+  --chapter-item-bg: var(--quote-bg);
+}
+
+:root.light {
+  --code-header-bg: #dddddd;
+  --code-header-button-fg: #555;
+  --code-border: #ccc;
+  --chapter-item-bg: var(--quote-bg);
+}
+
+:root.rust {
+  --code-header-bg: #dddddd;
+  --code-header-button-fg: #555;
+  --code-border: #ccc;
+  --chapter-item-bg: #444;
+}
+
+@media (min-width: 576px) {
+  :root {
+    --content-ol-padding-inline-start: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --body-font-size: 1.3rem;
+    --content-ol-padding-inline-start: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --sidebar-width: 350px;
+    --body-font-size: 1.4rem;
+    --content-padding: 0 1rem 5rem 1rem;
+    --content-ol-padding-inline-start: 35px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --sidebar-width: 400px;
+    --body-font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  :root {
+    --sidebar-width: 500px;
+    --body-font-size: 1.6rem;
+  }
+}
+
+html,
+.code-header {
+  font-family: 'Segoe UI', 'Open Sans', sans-serif;
+}
+
+body {
+  font-size: var(--body-font-size);
+}
+
+#content {
+  padding: var(--content-padding);
+}
+
+details summary {
+  cursor: pointer;
+}
+
+details summary:hover {
+  color: var(--inline-code-color);
+}
+
+code {
+  font-family: Consolas, 'Source Code Pro', 'Ubuntu Mono', Menlo, 'DejaVu Sans Mono', monospace, monospace !important;
+}
+
+table {
+  margin: unset;
+}
+
+pre.pre-code-block {
+  border: 1px solid var(--code-border);
+}
+
+pre.pre-code-block .hljs.mini {
+  max-height: 500px;
+}
+
+pre.pre-code-block .hljs.h100 {
+  max-height: 100px;
+}
+
+pre.pre-code-block .hljs.h200 {
+  max-height: 200px;
+}
+
+pre.pre-code-block .hljs.h300 {
+  max-height: 300px;
+}
+
+pre.pre-code-block .hljs.h400 {
+  max-height: 400px;
+}
+
+pre.pre-code-block .hljs.h500 {
+  max-height: 500px;
+}
+
+pre.pre-code-block .hljs.h600 {
+  max-height: 600px;
+}
+
+pre.pre-code-block .hljs.h700 {
+  max-height: 700px;
+}
+
+pre.pre-code-block .hljs.h800 {
+  max-height: 800px;
+}
+
+pre.pre-code-block .hljs.h900 {
+  max-height: 900px;
+}
+
+pre.pre-code-block .hljs.primary {
+  border-top: 2px solid var(--primary);
+}
+
+pre.pre-code-block .hljs.secondary {
+  border-top: 2px solid var(--secondary);
+}
+
+pre.pre-code-block .hljs.success {
+  border-top: 2px solid var(--success);
+}
+
+pre.pre-code-block .hljs.info {
+  border-top: 2px solid var(--info);
+}
+
+pre.pre-code-block .hljs.warning {
+  border-top: 2px solid var(--warning);
+}
+
+pre.pre-code-block .hljs.danger {
+  border-top: 2px solid var(--danger);
+}
+
+pre.pre-code-block .hljs.light {
+  border-top: 2px solid var(--light);
+}
+
+pre.pre-code-block .hljs.dark {
+  border-top: 2px solid var(--dark);
+}
+
+pre.pre-code-block .code-header {
+  background-color: var(--code-header-bg);
+  position: relative;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 7px;
+}
+
+pre.pre-code-block .code-header .code-language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: smaller;
+  position: relative;
+  color: var(--code-header-fg);
+}
+
+pre.pre-code-block .code-header .code-language.unknow {
+  text-transform: uppercase;
+}
+
+pre.pre-code-block .code-header .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+pre.pre-code-block .code-header .buttons button {
+  background: none;
+  border: none;
+  color: var(--code-header-button-fg);
+  cursor: pointer;
+  position: relative;
+}
+
+pre.pre-code-block .code-header .buttons button:hover {
+  color: var(--inline-code-color);
+}
+
+#sidebar .sidebar-scrollbox {
+  padding: 10px 0;
+}
+
+#sidebar .sidebar-scrollbox .chapter > li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#sidebar .sidebar-scrollbox .chapter > li.chapter-item {
+  font-weight: bold;
+  background-color: var(--chapter-item-bg);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#sidebar .sidebar-scrollbox .chapter > li.chapter-item.affix {
+  font-weight: unset;
+  background-color: unset;
+  padding-top: unset;
+  padding-bottom: unset;
+}
+
+#sidebar .sidebar-scrollbox .chapter li > a > strong[aria-hidden] {
+  opacity: 50%;
+}
+
+.content blockquote {
+  -webkit-box-shadow: -0.1em 0 0 0;
+          box-shadow: -0.1em 0 0 0;
+  margin-left: 0.1em;
+}
+
+.content blockquote h1,
+.content blockquote h2,
+.content blockquote h3,
+.content blockquote h4,
+.content blockquote h5,
+.content blockquote h6 {
+  margin-top: 0.5em;
+}
+
+.content a {
+  overflow-wrap: break-word;
+}
+
+.content img {
+  margin: 0.3em 0;
+  border: 1px solid var(--quote-border);
+}
+
+.content img[alt='Satisfied'] {
+  border: none !important;
+}
+
+.content li {
+  padding-left: 0.5em;
+}
+
+.content li blockquote {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.content li blockquote > p {
+  -webkit-margin-before: 0.5em;
+          margin-block-start: 0.5em;
+  -webkit-margin-after: 0.5em;
+          margin-block-end: 0.5em;
+}
+
+.content ol,
+.content ul {
+  -webkit-padding-start: var(--content-ol-padding-inline-start);
+          padding-inline-start: var(--content-ol-padding-inline-start);
+}
+
+.content .header code {
+  color: var(--inline-code-color);
+}

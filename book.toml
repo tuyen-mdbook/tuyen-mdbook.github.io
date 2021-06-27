@@ -1,0 +1,6 @@
+[book]
+authors = ["Tuyen Pham"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Tuyen mdBook"
