@@ -14,8 +14,9 @@ jobs:
           wget -q "https://github.com/tuyen-at-work/mdBook/releases/latest/download/${MDBOOK_TARBALL}"
           tar -zxvf "${MDBOOK_TARBALL}"
           rm "${MDBOOK_TARBALL}"
-          # mkdir ~/bin
-          # mv ./mdbook ~/bin/
+          mkdir ~/bin
+          mv ./mdbook ~/bin/
+          echo "${HOME}/.local/bin" >> "~/bin"
           # echo "::add-path::~/bin"
             
       - name: Checkout 🛎️
