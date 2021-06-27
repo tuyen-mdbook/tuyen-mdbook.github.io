@@ -14,7 +14,7 @@ jobs:
       - name: Setup mdBook
         run: |
           export MDBOOK_TARBALL="mdbook-x86_64-unknown-linux-gnu.tar.gz"
-          wget -qO- https://github.com/tuyen-at-work/mdBook/releases/latest/download/${MDBOOK_TARBALL}
+          wget -q "https://github.com/tuyen-at-work/mdBook/releases/latest/download/${MDBOOK_TARBALL}"
           tar -zxvf "${MDBOOK_TARBALL}"
           rm "${MDBOOK_TARBALL}"
           mkdir ~/bin
