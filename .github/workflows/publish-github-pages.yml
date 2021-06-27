@@ -23,7 +23,7 @@ jobs:
 
       - name: Build Book 🛎️
         run: |
-          mdbook build
+          ./mdbook build
             
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.3
