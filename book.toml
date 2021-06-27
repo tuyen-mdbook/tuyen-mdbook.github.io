@@ -5,9 +5,24 @@ multilingual = false
 src = "src"
 title = "Tuyen mdBook"
 
+[rust]
+edition = "2018"
+
 [build]
-build-dir = "docs"
-create-missing = false
+build-dir = "book/"
+create-missing = true
+
+[preprocessor.index]
+
+[preprocessor.links]
+
+[output.html]
+no-section-label = true
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
+copy-fonts = true
+git-repository-url = "https://github.com/tuyen-mdbook/tuyen-mdbook.github.io"
+git-repository-icon = "fa-github"
 
 [output.html.print]
 enable = true
