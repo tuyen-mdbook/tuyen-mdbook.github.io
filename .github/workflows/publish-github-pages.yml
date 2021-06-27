@@ -16,7 +16,7 @@ jobs:
           rm "${MDBOOK_TARBALL}"
           mkdir ~/bin
           mv ./mdbook ~/bin/
-          echo "${HOME}/.local/bin" >> "~/bin"
+          echo "~/bin" >> $GITHUB_PATH
           # echo "::add-path::~/bin"
             
       - name: Checkout 🛎️
